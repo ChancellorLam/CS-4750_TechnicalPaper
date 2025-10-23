@@ -1,0 +1,5 @@
+# Ignore files in Paper and all subdirectories
+Paper/**/*.aux
+Paper/**/*.log
+Paper/**/*.pdf
+Paper/**/*.synctex.gz
