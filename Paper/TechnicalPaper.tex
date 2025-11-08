@@ -7,8 +7,10 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{hyperref}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\graphicspath{ {./images/} }
 \begin{document}
 
 \title{The Role of AI in Cybersecurity \\
@@ -74,6 +76,13 @@ In contrast, AI-powered, anomaly-based IDS models establish baselines of normal 
 
 Performance analyses confirm the effectiveness of AI-driven detection. Machine learning models such as Random Forest and Support Vector Machines (SVM) have improved detection accuracy by 17–35\% compared to conventional IDS [8]. Deep learning models trained on over 500,000 incident records have achieved accuracy rates of 96.8\%, surpassing Random Forest (94.1\%) and SVM (92.3\%) [1]. Even unsupervised methods like K-Means clustering have demonstrated high detection rates of up to 89.5\% for malicious activities without requiring labeled datasets [1]. These results demonstrate how AI can increase the speed, accuracy, and adaptability of threat detection, allowing cybersecurity systems to respond faster and more precisely than ever before.
 
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\linewidth]{CS4750-figure1.png}
+    \caption{Visualization of AI-based threat detection architecture.\\ (Image from Busireddy et al., 2025)}
+    \label{fig:placeholder}
+\end{figure}
+
 Beyond network intrusions, AI also advances malware detection capabilities. Traditional hash-based or heuristic methods rely on fixed code patterns, which are ineffective against polymorphic malware, viruses that alter their code to avoid signature-based identification. AI-based systems address this limitation by analyzing behavioral and contextual features of programs rather than their code structure [4][5]. Through pattern recognition and continuous learning, AI models can identify consistent malicious behaviors across variants, enabling the detection of previously unseen malware strains. This behavioral approach allows AI to maintain accuracy even as attackers modify their code, making it an essential tool in combating modern, adaptive malware.
 
 AI further extends its utility to phishing and fraud detection, which have increasingly become major vectors for cyberattacks. Natural Language Processing (NLP) models analyze the linguistic characteristics of messages such as tone, urgency, and emotional manipulation to identify suspicious communication across email, messaging, and social media platforms [7]. These AI-driven systems detect subtle patterns that would otherwise be overlooked by static filters, greatly improving detection reliability. In financial security, AI-powered fraud detection systems have reduced false positives by up to 35\%, increasing efficiency and trust in automated detection mechanisms [8]. Through these advancements, AI continues to transform the landscape of threat detection, making cybersecurity systems more adaptive, intelligent, and effective against a wide range of evolving threats.
@@ -87,7 +96,14 @@ This predictive capability allows organizations to prioritize patching and resou
 
 AI also plays a crucial role in automating and orchestrating incident response, reducing both human workload and response time. By integrating AI with Security Orchestration, Automation, and Response (SOAR) platforms, organizations can streamline repetitive tasks such as alert triage, threat containment, and log correlation. These intelligent systems continuously learn from historical incident data, enabling them to autonomously determine the most effective remediation actions for various threat scenarios [8].
 
-Reinforcement learning further enhances these capabilities by enabling self-improving defense mechanisms. Through simulated attack environments, RL agents learn optimal response policies such as dynamically reconfiguring firewall rules, isolating compromised hosts, or blocking suspicious user accounts to mitigate ongoing attacks [8]. Over time, these adaptive models refine their strategies, leading to a continuous cycle of improvement that strengthens network resilience.
+Reinforcement learning further enhances these capabilities by enabling self-improving defense mechanisms. Through simulated attack environments, RL agents learn optimal response policies such as dynamically reconfiguring firewall rules, isolating compromised hosts, or blocking suspicious user accounts to mitigate ongoing attacks [8]. Over time, these adaptive models refine their strategies, leading to a continuous cycle of improvement that strengthens network resilience.\\
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\linewidth]{CS4750-figure2.png}
+    \caption{Visualization of AI-methodologies in threat prevention\\(Image from Rahman et al., 2025)}
+    \label{fig:placeholder}
+\end{figure}
 
 According to recent performance evaluations, AI-enhanced SOAR implementations can reduce incident response times by up to 45\%, while simultaneously increasing accuracy in event correlation and threat containment [8]. This level of automation allows cybersecurity teams to focus on strategic analysis and high-level decision-making rather than repetitive operational tasks. Ultimately, AI-driven prevention mechanisms mark a shift toward autonomous, predictive security ecosystems capable of anticipating and neutralizing threats before they cause significant damage.
 
@@ -95,6 +111,14 @@ According to recent performance evaluations, AI-enhanced SOAR implementations ca
 Generative AI (GenAI) models such as ChatGPT and other large language models (LLMs) have rapidly transformed the cyber threat landscape by enabling attackers to craft highly personalized, human-like phishing campaigns. Unlike traditional phishing, which often relies on generic or poorly written messages, GenAI-generated content mirrors legitimate communication patterns adapting tone, syntax, and context to target individuals or organizations more convincingly [3]. These capabilities significantly increase the success rate of social engineering attacks by reducing the linguistic and behavioral cues that typically reveal deception.
 
 Beyond social engineering, cybercriminals can exploit GenAI tools to generate, obfuscate, or refine malicious code. By leveraging GenAI’s programming capabilities, attackers can develop polymorphic malware that continually changes its structure to evade detection, or create exploit scripts tailored to specific vulnerabilities. Moreover, “jailbreaking” techniques, methods used to override the ethical and safety constraints of AI models allow malicious users to extract sensitive information or induce the model to produce restricted content, including exploit code or phishing templates [3]. These developments highlight how the democratization of GenAI, while beneficial for innovation, also lowers the barrier to entry for cybercriminals and increases the complexity of modern cyber defense.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\linewidth]{CS4750-figure3.png}
+    \caption{WannaCry Ransomware attack code generation using ChatGPT\\
+    (Image from Gupta, et al., 2023)}
+    \label{fig:placeholder}
+\end{figure}
 
 Despite these threats, GenAI also offers powerful defensive applications that enhance the capabilities of cybersecurity professionals. Security analysts are increasingly employing GenAI systems as analytical assistants to interpret complex datasets, correlate threat indicators, and support threat-hunting operations [3][9]. By processing vast volumes of data and recognizing subtle patterns, GenAI tools can assist in identifying anomalies that might otherwise go unnoticed.
 
@@ -128,5 +152,69 @@ Artificial Intelligence has fundamentally transformed cybersecurity, shifting th
 However, the adoption of AI is not without risks. Adversarial manipulation, opaque decision-making in complex models, and data or resource limitations highlight the need for careful, responsible implementation [9][10]. Addressing these vulnerabilities through explainable AI, standardized evaluation frameworks, and robust training data is essential to ensure that AI-driven cybersecurity solutions remain trustworthy and effective.
 
 Looking forward, the evolution of AI in cybersecurity will depend on the development of explainable, collaborative, and adaptive systems capable of responding to an increasingly sophisticated threat landscape. By balancing innovation with accountability, AI can continue to strengthen digital resilience, safeguarding organizations and individuals against emerging cyber threats.
+
+\begin{thebibliography}{10}
+
+\bibitem{busireddy2025bigdata}
+Busireddy, H. K., Nuka, S. T., Malempati, M., Sriram, H. K., Mashetty, S., \& Kannan, S. (2025).
+\newblock Big data in cybersecurity: Enhancing threat detection with AI and ML.
+\newblock {\em Metallurgical and Materials Engineering, 31}(3), 12--20.
+\newblock \href{https://doi.org/10.63278/1315}{https://doi.org/10.63278/1315}
+
+\bibitem{camacho2024role}
+Camacho, N. G. (2024).
+\newblock The role of AI in cybersecurity: Addressing threats in the digital age.
+\newblock {\em Journal of Artificial Intelligence General Science (JAIGS), 3}(1), 143--154.
+\newblock \href{https://doi.org/10.60087/jaigs.v3i1.75}{https://doi.org/10.60087/jaigs.v3i1.75}
+
+\bibitem{gupta2023threatgpt}
+Gupta, M., Akiri, C., Aryal, K., Parker, E., \& Praharaj, L. (2023).
+\newblock From ChatGPT to ThreatGPT: Impact of generative AI in cybersecurity and privacy.
+\newblock {\em IEEE Access, 11}, 80218--80245.
+\newblock \href{https://doi.org/10.1109/ACCESS.2023.3300381}{https://doi.org/10.1109/ACCESS.2023.3300381}
+
+\bibitem{hasanah2025malware}
+Hasanah, N. I., Insany, G. P., Kharisma, I. L., \& Rahayu, N. D. (2025).
+\newblock Recent advancements in machine learning models for malware detection: A systematic literature review.
+\newblock {\em Engineering Proceedings, 107}(1), 78.
+\newblock \href{https://doi.org/10.3390/engproc2025107078}{https://doi.org/10.3390/engproc2025107078}
+
+\bibitem{khan2024aidetection}
+Khan, M. I., Arif, A., \& Khan, A. R. A. (2024).
+\newblock AI-driven threat detection: A brief overview of AI techniques in cybersecurity.
+\newblock {\em BIN: Bulletin of Informatics, 2}(2), 248--261.
+\newblock Available at \href{https://www.researchgate.net/publication/391613291_AI-Driven_Threat_Detection_A_Brief_Overview_of_AI_Techniques_in_Cybersecurity}{ResearchGate}
+
+\bibitem{kimanzi2024deeplearning}
+Kimanzi, R., Kimanga, P., Cherori, D., \& Gikunda, P. K. (2024).
+\newblock Deep learning algorithms used in intrusion detection systems: A review.
+\newblock {\em arXiv preprint arXiv:2402.17020}.
+\newblock \href{https://arxiv.org/abs/2402.17020}{https://arxiv.org/abs/2402.17020}
+
+\bibitem{kipchirchir2024phishing}
+Kipchirchir, S., \& Odoyo, W. (2024).
+\newblock AI-based phishing attack detection and prevention using natural language processing (NLP).
+\newblock {\em IC-ITECHS, 5}(1), 597--602.
+\newblock \href{https://doi.org/10.32664/ic-itechs.v5i1.1590}{https://doi.org/10.32664/ic-itechs.v5i1.1590}
+
+\bibitem{rahman2025aiintegration}
+Rahman, M. M., Dhakal, K., Md, N. G., Sd, M. K. S., \& Md, M. R. (2025).
+\newblock AI integration in cybersecurity software: Threat detection and response.
+\newblock {\em International Journal of Innovative Research and Scientific Studies, 8}(3), 3907--3921.
+\newblock \href{https://doi.org/10.53894/ijirss.v8i3.7403}{https://doi.org/10.53894/ijirss.v8i3.7403}
+
+\bibitem{shahana2024aidriven}
+Shahana, A., Hasan, R., Farabi, S., Akter, J., Mahmud, M., Johora, F., \& Suzer, G. (2024).
+\newblock AI-driven cybersecurity: Balancing advancements and safeguards.
+\newblock {\em Journal of Computer Science and Technology Studies, 6}(2), 76--85.
+\newblock \href{https://doi.org/10.32996/jcsts.2024.6.2.9}{https://doi.org/10.32996/jcsts.2024.6.2.9}
+
+\bibitem{sontan2024intersection}
+Sontan, A. D., \& Samuel, S. V. (2024).
+\newblock The intersection of artificial intelligence and cybersecurity: Challenges and opportunities.
+\newblock {\em World Journal of Advanced Research and Reviews, 21}(2), 1720--1736.
+\newblock \href{https://doi.org/10.30574/wjarr.2024.21.2.0607}{https://doi.org/10.30574/wjarr.2024.21.2.0607}
+
+\end{thebibliography}
 
 \end{document}
